@@ -31,7 +31,7 @@ export default function NavigationPopup({ className }: { className: string }) {
           <NavigationMenu.List className="flex">
             <NavigationMenu.Item>
               <NavigationMenu.Trigger className="group" asChild>
-                <Link href={"/"}>
+                <Link href={"/dashboard"}>
                   <Pill
                     label={title}
                     variant="link"
@@ -55,7 +55,7 @@ export default function NavigationPopup({ className }: { className: string }) {
                     {items.map((item) => (
                       <li key={item.title} className="flex">
                         <Link
-                          href="/"
+                          href="/dashboard"
                           className={twMerge(
                             "p-4 gap-2 flex-1 stroke-black hover:stroke-white hover:bg-black hover:text-white flex justify-between",
                             !item.hasMore && "underline"

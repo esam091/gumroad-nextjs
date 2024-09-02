@@ -213,7 +213,7 @@ function CategoryCard({
   sales,
 }: CategoryCardProps) {
   return (
-    <Link href="/" className="hover:shadow-1 hover:-translate-x-1 hover:-translate-y-1 transition-transform rounded-1 active:transform-none active:shadow-0">
+    <Link href="/dashboard" className="hover:shadow-1 hover:-translate-x-1 hover:-translate-y-1 transition-transform rounded-1 active:transform-none active:shadow-0">
       <div className="bg-white border border-solid border-black rounded-1 p-5 flex gap-5 items-start h-full w-full">
         <Image
           src={image}

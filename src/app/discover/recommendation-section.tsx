@@ -133,7 +133,7 @@ function ProductCard({
   rating,
 }: ProductCardProps) {
   return (
-    <Link href="/" className="hover:shadow-1 rounded-1 transition-all">
+    <Link href="/dashboard" className="hover:shadow-1 rounded-1 transition-all">
       <article className="w-full h-full snap-start bg-white border border-solid border-black min-w-[min(20rem,60vw)] md:min-w-[40rem] md:h-[24rem] rounded-1 flex flex-col md:flex-row">
         <Image
           src={image}

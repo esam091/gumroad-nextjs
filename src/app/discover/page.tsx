@@ -30,7 +30,7 @@ export default function Page() {
         </div>
       </div>
       <header className="grid md:px-8 sm:grid-cols-[auto_1fr_auto_auto] px-4 py-6 gap-4 grid-cols-[1fr_auto] items-center lg:container lg:mx-auto">
-        <Link href="/">
+        <Link href="/dashboard">
           <Lettermark className="w-[170px] fill-black" />
         </Link>
 
@@ -50,7 +50,7 @@ export default function Page() {
           onClick={() => setShowOverlay(true)}
         />
 
-        <Link className="hidden lg:flex lg:-col-start-1" href="/">
+        <Link className="hidden lg:flex lg:-col-start-1" href="/dashboard">
           <Button
             label="Library"
             variant="secondary"
@@ -94,7 +94,7 @@ export default function Page() {
               <Menu title="Recorded Music" hasMore />
             </div>
             <div className="sticky bottom-[0] bg-white p-4">
-              <Link href="/">
+              <Link href="/dashboard">
                 <Button
                   leftIcon={<BookmarkHeartFill className="w-4" />}
                   label="Library"
@@ -138,7 +138,7 @@ interface MenuProps {
 function Menu({ title, hasMore = false }: MenuProps) {
   return (
     <Link
-      href="/"
+      href="/dashboard"
       className={twMerge(
         "flex flex-row items-center justify-between text-start bg-white p-4 stroke-black hover:stroke-white hover:bg-black text-black hover:text-white",
         !hasMore && "underline"
