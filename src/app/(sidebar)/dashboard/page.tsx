@@ -61,7 +61,7 @@ export default function Home() {
           <h2 className="text-h2">Activity</h2>
 
           <p className="p-6 bg-white border border-black border-dashed rounded-1 text-center">
-            Followers and sales will sho up here as they come in. For now,
+            Followers and sales will show up here as they come in. For now,
             <span className="underline">create a product</span> or{" "}
             <span className="underline">customize your profile</span>
           </p>
