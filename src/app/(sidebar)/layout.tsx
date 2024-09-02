@@ -7,13 +7,13 @@ export default function Layout({ children }: PropsWithChildren) {
   return (
     <>
       <div className="flex h-full">
-        <div className="hidden md:flex flex-col bg-black text-white">
+        <div className="hidden md:flex flex-col bg-black text-white overflow-auto">
           <header className="px-5 h-[7rem] flex items-center">
             <Lettermark className="fill-white w-[157px]" />
           </header>
           <NavigationSection />
         </div>
-        <div className="flex-1">
+        <div className="flex-1 overflow-auto">
           <Header />
           <main className="pt-[62px] md:pt-[unset] flex-1 [&>*]:h-full">
             {children}
