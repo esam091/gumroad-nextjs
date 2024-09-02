@@ -153,7 +153,7 @@ function ProductCard({
 
           <footer className="flex justify-between divide-solid divide-black divide-x md:divide-x-0">
             <div className="p-4">
-              <div className="text-base border border-black border-r-[0] border-solid bg-[linear-gradient(to_left,transparent_1.5rem,_#FF90E8_1em)] py-1 pl-2 pr-5 relative before:absolute after:absolute before:top-[0] after:top-[0] before:bottom-[0] after:bottom-[0] after:right-[.0625rem] before:right-[0] before:border-l-[0] after:border-l-[0] after:w-5 before:w-5 after:border-pink-bold before:border-black after:border-r-[transparent] before:border-r-[transparent] after:border-r-[1rem] before:border-r-[1rem] before:border-[calc(0.25rem+0.5lh)] after:border-[calc(0.25rem+0.5lh)]">
+              <div className="text-base border border-black border-r-[0] border-solid bg-[linear-gradient(to_left,transparent_1rem,_#FF90E8_1rem)] py-1 pl-2 pr-5 relative before:absolute after:absolute before:top-[0] after:top-[0] before:bottom-[0] after:bottom-[0] after:right-[.0625rem] before:right-[0] before:border-l-[0] after:border-l-[0] after:w-5 before:w-5 after:border-pink-bold before:border-black after:border-r-[transparent] before:border-r-[transparent] after:border-r-[1rem] before:border-r-[1rem] before:border-[calc(0.25rem+0.5lh)] after:border-[calc(0.25rem+0.5lh)]">
                 {price}
               </div>
             </div>
