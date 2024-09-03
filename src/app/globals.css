@@ -7,3 +7,35 @@
     text-wrap: balance;
   }
 }
+
+@layer base {
+  :root {
+    --background: rgb(244, 244, 240);
+    --foreground: black;
+    --foreground-secondary: rgba(0, 0, 0, 0.5);
+    --card: white;
+    --border: black;
+    --input-placeholder: rgba(0, 0, 0, 0.5);
+    --shadow: black;
+  }
+
+  .dark {
+    --background: rgb(36, 36, 35);
+    --foreground: rgb(221, 221, 221);
+    --foreground-secondary: rgba(221, 221, 221, 0.5);
+    --card: black;
+    --border: rgba(221, 221, 221, 0.35);
+    --input-placeholder: rgba(221, 221, 221, 0.5);
+    --shadow: white;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border
+  }
+
+  body {
+    @apply bg-background text-foreground fill-foreground
+  }
+}

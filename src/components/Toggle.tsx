@@ -15,7 +15,7 @@ const Toggle = forwardRef<
       )}
       {...props}
     >
-      <Thumb className="bg-black w-[18px] h-[18px] rounded-3 block data-[state=checked]:translate-x-[17px] transition-transform" />
+      <Thumb className="bg-black dark:bg-white w-[18px] h-[18px] rounded-3 block data-[state=checked]:translate-x-[17px] transition-transform" />
     </Root>
   );
 });

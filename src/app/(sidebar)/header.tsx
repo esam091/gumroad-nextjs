@@ -14,6 +14,7 @@ import XIcon from "@/icons/XIcon";
 import SolidSearchIcon from "@/icons/SolidSearchIcon";
 import NavLink from "./nav-link";
 import NavigationSection from "./navigation-section";
+import DarkModeToggle from "../dark-mode-toggle";
 
 export default function Header() {
   const [showMenu, setShowMenu] = useState(false);
@@ -27,13 +28,16 @@ export default function Header() {
 
         <span>Gumroad</span>
 
-        <button onClick={() => setShowMenu(!showMenu)}>
-          {showMenu ? (
-            <XIcon className="fill-white w-5" />
-          ) : (
-            <MenuIcon className="fill-white w-5" />
-          )}
-        </button>
+        <div className="flex gap-5">
+          <DarkModeToggle />
+          <button onClick={() => setShowMenu(!showMenu)}>
+            {showMenu ? (
+              <XIcon className="fill-white w-5" />
+            ) : (
+              <MenuIcon className="fill-white w-5" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {showMenu && <NavigationSection />}

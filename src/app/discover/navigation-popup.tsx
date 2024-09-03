@@ -35,7 +35,7 @@ export default function NavigationPopup({ className }: { className: string }) {
                   <Pill
                     label={title}
                     variant="link"
-                    className="group-hover:bg-white cursor-pointer transition-transform group-hover:shadow-1 group-hover:-translate-x-1 group-hover:-translate-y-1"
+                    className="group-hover:bg-card cursor-pointer transition-transform group-hover:shadow-1 group-hover:-translate-x-1 group-hover:-translate-y-1"
                   />
                 </Link>
               </NavigationMenu.Trigger>
@@ -45,10 +45,10 @@ export default function NavigationPopup({ className }: { className: string }) {
                   className={twMerge(
                     "absolute overflow-hidden top-2 left-[0] border border-solid border-black rounded-1 shadow-1",
                     color === "white"
-                      ? "bg-white"
+                      ? "bg-card"
                       : color === "green"
-                        ? "bg-green-bold"
-                        : "bg-gold-bold"
+                        ? "bg-green-bold text-black"
+                        : "bg-gold-bold text-black"
                   )}
                 >
                   <ul>
@@ -57,7 +57,9 @@ export default function NavigationPopup({ className }: { className: string }) {
                         <Link
                           href="/dashboard"
                           className={twMerge(
-                            "p-4 gap-2 flex-1 stroke-black hover:stroke-white hover:bg-black hover:text-white flex justify-between",
+                            "p-4 gap-2 flex-1 flex justify-between",
+                            color !== 'white' && 'stroke-black hover:stroke-white hover:bg-black hover:text-white',
+                            color === 'white' && 'stroke-white hover:stroke-black hover:bg-white hover:text-black' ,
                             !item.hasMore && "underline"
                           )}
                         >

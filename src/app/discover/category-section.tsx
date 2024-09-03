@@ -214,7 +214,7 @@ function CategoryCard({
 }: CategoryCardProps) {
   return (
     <Link href="/dashboard" className="hover:shadow-1 hover:-translate-x-1 hover:-translate-y-1 transition-transform rounded-1 active:transform-none active:shadow-0">
-      <div className="bg-white border border-solid border-black rounded-1 p-5 flex gap-5 items-start h-full w-full">
+      <div className="bg-card border border-solid rounded-1 p-5 flex gap-5 items-start h-full w-full">
         <Image
           src={image}
           width={96}
@@ -225,7 +225,7 @@ function CategoryCard({
         <div className="flex flex-col gap-2">
           <h3 className="text-h2 font-bold">{title}</h3>
           <p>{description}</p>
-          <div className="flex flex-wrap gap-3 text-black/50 fill-black/50">
+          <div className="flex flex-wrap gap-3 text-foreground-secondary fill-foreground-secondary">
             <span className="inline-flex items-center gap-1">
               <PersonCircleFillIcon className="w-4" /> {creators}K creators
             </span>

@@ -7,8 +7,8 @@ export const buttonVariants = cva(
     variants: {
       variant: {
         primary: "text-white [&>svg_*]:!fill-white [&>svg>path]:hover:enabled:!fill-black bg-black hover:enabled:text-black hover:enabled:bg-pink-bold",
-        secondary: "bg-opacity-0 hover:bg-gray-50 border-black border-solid border text-black [&>svg_*]:!fill-black",
-        filled: "bg-white border-black border-solid border text-black [&>svg_*]:!fill-black",
+        secondary: "bg-opacity-0 border-solid border text-foreground [&>svg_*]:!fill-foreground",
+        filled: "bg-card border-solid border text-foreground [&>svg_*]:!fill-foreground",
         accent: "bg-pink-bold border border-black border-solid text-black [&>svg_*]:!fill-black",
         destroyOutline: "border border-black border-solid hover:enabled:bg-red-bold hover:enabled:text-white text-black [&>svg_*]:!fill-black [&>svg_*]:hover:enabled:!fill-white",
         destroy: "border border-black border-solid bg-red-bold text-white [&>svg_*]:!fill-white",

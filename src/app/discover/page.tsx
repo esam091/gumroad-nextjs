@@ -16,6 +16,7 @@ import XIcon from "@/icons/XIcon";
 import Pill from "@/components/Pill";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import NavigationPopup from "./navigation-popup";
+import DarkModeToggle from "../dark-mode-toggle";
 
 export default function Page() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -23,15 +24,19 @@ export default function Page() {
   return (
     <div className={twMerge("relative", showOverlay && "overflow-y-hidden")}>
       <div className="bg-black text-white flex">
-        <div className="p-4 md:px-8 lg:mx-auto lg:container">
+        <div className="p-4 md:px-8 lg:mx-auto lg:container gap-3 flex w-full justify-between">
           <Link href="/dashboard" className="underline">
             Dashboard
           </Link>
+
+          <DarkModeToggle />
         </div>
+
+       
       </div>
       <header className="grid md:px-8 sm:grid-cols-[auto_1fr_auto_auto] px-4 py-6 gap-4 grid-cols-[1fr_auto] items-center lg:container lg:mx-auto">
         <Link href="/dashboard">
-          <Lettermark className="w-[170px] fill-black" />
+          <Lettermark className="w-[170px] fill-foreground" />
         </Link>
 
         <Image
@@ -39,7 +44,7 @@ export default function Page() {
           width={24}
           height={24}
           alt="avatar"
-          className="rounded-3 border border-black border-solid place-self-end self-center lg:row-start-2 lg:-col-start-1"
+          className="rounded-3 border border-solid place-self-end self-center lg:row-start-2 lg:-col-start-1"
         />
         <SearchBar />
 
@@ -61,7 +66,7 @@ export default function Page() {
         <NavigationPopup className="hidden lg:row-start-2 lg:col-span-4 lg:flex" />
       </header>
 
-      <div className="w-full border border-t-black border-solid"></div>
+      <div className="w-full border-t border-t-border  border-solid"></div>
 
       <main className="p-4 md:p-8 flex flex-col gap-6 lg:container lg:mx-auto">
         <RecommendationSection />
@@ -71,7 +76,7 @@ export default function Page() {
 
       {showOverlay && (
         <div className="absolute inset-[0] bg-black/50 z-10 flex justify-between">
-          <div className="bg-white w-[20rem] max-h-full h-full overflow-y-scroll">
+          <div className="bg-card w-[20rem] max-h-full h-full overflow-y-scroll">
             <div className="flex flex-col items-stretch ">
               <Menu title="All" />
               <Menu title="Business & Money" hasMore />
@@ -93,7 +98,7 @@ export default function Page() {
               <Menu title="Fiction Books" hasMore />
               <Menu title="Recorded Music" hasMore />
             </div>
-            <div className="sticky bottom-[0] bg-white p-4">
+            <div className="sticky bottom-[0] p-4">
               <Link href="/dashboard">
                 <Button
                   leftIcon={<BookmarkHeartFill className="w-4" />}
@@ -119,11 +124,11 @@ export default function Page() {
 
 function SearchBar() {
   return (
-    <div className="lg:col-span-3 lg:col-start-2 flex px-4 gap-2 sm:col-start-2 sm:row-start-1 focus-within:ring-0 focus-within:ring-offset-2 focus-within:ring-offset-pink-bold bg-white rounded-1 border border-solid border-black">
-      <SolidSearchIcon className="w-4 fill-black/50" />
+    <div className="lg:col-span-3 lg:col-start-2 flex px-4 gap-2 sm:col-start-2 sm:row-start-1 focus-within:ring-0 focus-within:ring-offset-2 focus-within:ring-offset-pink-bold bg-card rounded-1 border border-solid">
+      <SolidSearchIcon className="w-4 fill-input-placeholder" />
 
       <input
-        className="py-3 w-full placeholder:text-black/50 cursor-pointer rounded-1 outline-none bg-[transparent]"
+        className="py-3 w-full placeholder:text-input-placeholder cursor-pointer rounded-1 outline-none bg-[transparent]"
         placeholder="Search products"
       />
     </div>
@@ -140,7 +145,7 @@ function Menu({ title, hasMore = false }: MenuProps) {
     <Link
       href="/dashboard"
       className={twMerge(
-        "flex flex-row items-center justify-between text-start bg-white p-4 stroke-black hover:stroke-white hover:bg-black text-black hover:text-white",
+        "flex flex-row items-center justify-between text-start bg-card p-4 stroke-foreground hover:stroke-white hover:bg-foreground text-foreground hover:text-background",
         !hasMore && "underline"
       )}
     >

@@ -134,7 +134,7 @@ function ProductCard({
 }: ProductCardProps) {
   return (
     <Link href="/dashboard" className="hover:shadow-1 rounded-1 transition-all">
-      <article className="w-full h-full snap-start bg-white border border-solid border-black min-w-[min(20rem,60vw)] md:min-w-[40rem] md:h-[24rem] rounded-1 flex flex-col md:flex-row">
+      <article className="w-full h-full snap-start bg-card border border-solid min-w-[min(20rem,60vw)] md:min-w-[40rem] md:h-[24rem] rounded-1 flex flex-col md:flex-row">
         <Image
           src={image}
           width={300}
@@ -143,22 +143,22 @@ function ProductCard({
           className="w-full md:w-[unset] rounded-ss-1 rounded-se-1 md:rounded-es-1 md:rounded-se-[0]"
         />
         <div className="flex-1 flex flex-col">
-          <header className="space-y-3 p-4 border-t md:border-t-0 md:border-b-0 border-b border-black border-solid flex-1">
+          <header className="space-y-3 p-4 border-t md:border-t-0 md:border-b-0 border-b border-solid flex-1">
             <h2 className="text-h2">{name}</h2>
-            <div className="text-sm text-black/50 hidden text-ellipsis md:line-clamp-4 overflow-hidden  ">
+            <div className="text-sm text-foreground-secondary hidden text-ellipsis md:line-clamp-4 overflow-hidden  ">
               {description}
             </div>
             <div className="underline">{shop}</div>
           </header>
 
-          <footer className="flex justify-between divide-solid divide-black divide-x md:divide-x-0">
+          <footer className="flex justify-between divide-solid divide-border divide-x md:divide-x-0">
             <div className="p-4">
-              <div className="text-base border border-black border-r-[0] border-solid bg-[linear-gradient(to_left,transparent_1rem,_#FF90E8_1rem)] py-1 pl-2 pr-5 relative before:absolute after:absolute before:top-[0] after:top-[0] before:bottom-[0] after:bottom-[0] after:right-[.0625rem] before:right-[0] before:border-l-[0] after:border-l-[0] after:w-5 before:w-5 after:border-pink-bold before:border-black after:border-r-[transparent] before:border-r-[transparent] after:border-r-[1rem] before:border-r-[1rem] before:border-[calc(0.25rem+0.5lh)] after:border-[calc(0.25rem+0.5lh)]">
+              <div className="text-base text-black border border-black border-r-[0] border-solid bg-[linear-gradient(to_left,transparent_1rem,_#FF90E8_1rem)] py-1 pl-2 pr-5 relative before:absolute after:absolute before:top-[0] after:top-[0] before:bottom-[0] after:bottom-[0] after:right-[.0625rem] before:right-[0] before:border-l-[0] after:border-l-[0] after:w-5 before:w-5 after:border-pink-bold before:border-black after:border-r-[transparent] before:border-r-[transparent] after:border-r-[1rem] before:border-r-[1rem] before:border-[calc(0.25rem+0.5lh)] after:border-[calc(0.25rem+0.5lh)]">
                 {price}
               </div>
             </div>
             <div className="p-4 flex items-center">
-              <SolidStarIcon className="w-4" /> {rating}
+              <SolidStarIcon className="w-4 fill-foreground" /> {rating}
             </div>
           </footer>
         </div>

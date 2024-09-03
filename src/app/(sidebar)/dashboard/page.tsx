@@ -6,8 +6,8 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-gray-100">
-      <header className="py-6 md:py-6 md:px-8 border-b border-solid border-black">
+    <div>
+      <header className="py-6 md:py-6 md:px-8 border-b border-solid border-border">
         <h1 className="hidden md:inline text-h1">Welcome to Gumroad.</h1>
       </header>
       <div className="flex flex-col p-4 gap-7 md:p-8 md:pr-push">
@@ -37,7 +37,7 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="text-h2">Getting Started</h2>
 
-          <div className="grid md:grid-cols-2 rounded-1 bg-black gap-[1px] border border-black border-solid overflow-clip">
+          <div className="grid md:grid-cols-2 rounded-1 bg-border border-[transparent] border gap-[1px]  border-solid overflow-clip">
             <Step title="Customize your profile" />
             <Step title="Create your first product" completed />
             <Step title="Get your first follower" completed />
@@ -50,7 +50,7 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="text-h2">Best Selling</h2>
 
-          <p className="p-6 bg-white border border-black border-dashed rounded-1 text-center">
+          <p className="p-6 bg-card border border-dashed rounded-1 text-center">
             You haven&apos;t made any sales yet. Learn how to{" "}
             <span className="underline">build a following</span> and{" "}
             <span className="underline">sell on Gumroad Discover</span>
@@ -60,7 +60,7 @@ export default function Home() {
         <section className="space-y-4">
           <h2 className="text-h2">Activity</h2>
 
-          <p className="p-6 bg-white border border-black border-dashed rounded-1 text-center">
+          <p className="p-6 bg-card border border-border border-dashed rounded-1 text-center">
             Followers and sales will show up here as they come in. For now,
             <span className="underline">create a product</span> or{" "}
             <span className="underline">customize your profile</span>
@@ -78,7 +78,7 @@ interface StepProps {
 
 function Step({ title, completed = false }: StepProps) {
   return (
-    <div className="flex items-center gap-3 p-4 bg-white">
+    <div className="flex items-center gap-3 p-4 bg-card">
       {completed ? (
         <CheckCircleFillIcon className="w-4 fill-green-bold" />
       ) : (
@@ -98,7 +98,7 @@ interface StatsProps {
 
 function Stats({ title, amount, tooltip }: StatsProps) {
   return (
-    <div className="p-5 border border-black border-solid rounded-1 bg-white space-y-2">
+    <div className="p-5 border border-solid rounded-1 bg-card space-y-2">
       <div className="flex gap-1 items-center">
         {title}{" "}
         <Tooltip

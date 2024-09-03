@@ -1,6 +1,7 @@
 import { Config } from "tailwindcss";
 
 const config: Config = {
+  darkMode: ['class'],
   content: ["./src/**/*.{ts,tsx}"],
   theme: {
     colors: {
@@ -35,6 +36,16 @@ const config: Config = {
         500: "#78716C",
         subtle: "#E5E5E5",
       },
+      background: 'var(--background)',
+      foreground: {
+        DEFAULT: 'var(--foreground)',
+        secondary: 'var(--foreground-secondary)'
+      },
+      card: 'var(--card)',
+      border: 'var(--border)',
+      input: {
+        placeholder: 'var(--input-placeholder)'
+      }
     },
     borderRadius: {
       1: "0.25rem",
@@ -42,9 +53,9 @@ const config: Config = {
       3: "10rem",
     },
     boxShadow: {
-      0: "0 0 0 black",
-      1: "0.25rem 0.25rem 0 black",
-      2: "0.5rem 0.5rem 0 black",
+      0: "0 0 0 var(--shadow)",
+      1: "0.25rem 0.25rem 0 var(--shadow)",
+      2: "0.5rem 0.5rem 0 black var(--shadow)",
     },
     spacing: {
       1: "0.25rem",
