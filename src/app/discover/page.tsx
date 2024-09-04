@@ -98,7 +98,7 @@ export default function Page() {
               <Menu title="Fiction Books" hasMore />
               <Menu title="Recorded Music" hasMore />
             </div>
-            <div className="sticky bottom-[0] p-4">
+            <div className="sticky bottom-[0] p-4 bg-card">
               <Link href="/dashboard">
                 <Button
                   leftIcon={<BookmarkHeartFill className="w-4" />}
