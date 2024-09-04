@@ -4,8 +4,8 @@ This project contains two things:
 
 ## Highlights
 ✅ Responsive  
-✅ Supports dark mode
-✅ Custom Tailwind CSS primitives  
+✅ Supports dark mode  
+✅ Custom Tailwind CSS primitives
 
 ## Technologies
 ![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
