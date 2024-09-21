@@ -1,5 +1,5 @@
 ## Links
-[![Storybook](https://img.shields.io/badge/Playground-FF4785?logo=storybook&logoColor=white&style=for-the-badge)](https://gumroad-components.samueledwin.com)
+[![Storybook](https://img.shields.io/badge/Playground-FF4785?logo=storybook&logoColor=white&style=for-the-badge)](https://react-design-system.samueledwin.com)
 [![Next.js](https://img.shields.io/badge/Live_Demo-black?logo=googlechrome&style=for-the-badge)](https://responsive-web.samueledwin.com/)
 
 ## About
